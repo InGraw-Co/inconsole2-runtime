@@ -4,11 +4,6 @@
 # InConsole 2.0 Runtime
 *Buildroot Package for InConsole 2.0 with support t113-s3*
 
-<br>
-
-[License]
-
-<br>
 </div>
 
 ## Quick Start-up
@@ -45,7 +40,8 @@ You can also find us on #buildroot on Freenode IRC.
 If you would like to contribute patches, please read
 https://buildroot.org/manual.html#submitting-patches
 ```
-
+## Licence
+[License]
 
 <!----------------------------------------------------------------------------->
 [License]: LICENSE
