@@ -8,7 +8,7 @@
 
 [Documentation] &mdash;
 [Releases] &mdash;
-[License] &mdash;
+[License]
 
 <br>
 </div>
