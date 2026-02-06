@@ -15,7 +15,6 @@
 
 
 ## Quick Start-up
-
 The recommended build environment is **Ubuntu 22.04 LTS (WSL)** – this setup was used for testing.  
 A native Linux installation should also work, however **x86_64 is strongly recommended**.
 
@@ -24,7 +23,6 @@ Other architectures (e.g. ARM) are not guaranteed to work out of the box and may
 ---
 
 ### 1. Install dependencies
-
 ```bash
 sudo apt install rsync wget unzip build-essential git bc swig libncurses-dev libpython3-dev libssl-dev python3-distutils android-tools-mkbootimg
 ```
@@ -32,7 +30,6 @@ sudo apt install rsync wget unzip build-essential git bc swig libncurses-dev lib
 ---
 
 ### 2. Clone the repository
-
 ```bash
 git clone https://github.com/InGraw-Co/inconsole2-runtime
 cd inconsole2-runtime
@@ -41,29 +38,24 @@ cd inconsole2-runtime
 ---
 
 ### 3. Build the system
-
 ```bash
 make
 ```
-
 Now wait until Buildroot finishes compiling everything.
 
 ---
 
 ### 4. Output image
-
 After a successful build, the SD card image will be available at:
 
 ```
 buildroot/output/images/sdcard.img
 ```
-
 If you are using **WSL**, simply copy this file to Windows.
 
 ---
 
 ### 5. Flashing the SD card
-
 1. Download **Balena Etcher**:  
    https://www.balena.io/etcher/
 2. Select `sdcard.img`
@@ -73,13 +65,15 @@ If you are using **WSL**, simply copy this file to Windows.
 ---
 
 ### 6. Boot
-
 Insert the SD card into **InConsole 2.0**, power it on and wait for boot.
 
 Please report bugs and issues using the **Issues** tab of this repository.
 
-## About Buildroot
+## Development
+Advanced build, configuration and package commands are documented here:
+➡️ [Buildroot Development Commands](docs/buildroot-commands.md)
 
+## About Buildroot
 ```
 Buildroot is a simple, efficient and easy-to-use tool to generate embedded
 Linux systems through cross-compilation.
