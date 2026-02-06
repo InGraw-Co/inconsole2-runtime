@@ -1,38 +1,20 @@
 
 <div align = center>
 
-# Buildroot YuzukiSBC
-*Buildroot Package Mainly for YuzukiHD Devices. Support Allwinner F1C100s/200s V3s V3x D1-H D1s T113 H616*
+# InConsole 2.0 Runtime
+*Buildroot Package for InConsole 2.0 with support t113-s3*
 
 <br>
 
 [Documentation] &mdash;
 [Releases] &mdash;
 [License] &mdash;
-[Mirror]
-
-<br>
-
-![Badge Cats]
-![Badge Betamax]
-[![Badge Build]][CI]
 
 <br>
 </div>
 
-## Supported Device Lists
-Please visit [Support Lists Page]
-
 ## Quick Start-up
 
-```
-git clone https://github.com/yuzukihd/Buildroot-YuzukiSBC # Clone the code of Buildroot-YuzukiSBC
-cd Buildroot-YuzukiSBC                                    # Change to the directory
-source envsetup.sh                                        # Set the build environment
-lunch                                                     # lunch the buildroot environment
-make yuzukihd_yuzukiruler_defconfig                       # Select target board
-make                                                      # Build and pack
-```
 For more details, please check [Documentation]
 
 ## About Buildroot
@@ -69,16 +51,7 @@ https://buildroot.org/manual.html#submitting-patches
 
 <!----------------------------------------------------------------------------->
 
-[Badge Betamax]: https://forthebadge.com/images/badges/compatibility-betamax.svg
-[Badge Build]: https://ci.appveyor.com/api/projects/status/qa7iq9ip0g3nh96c?retina=true
-[Badge Cats]: https://forthebadge.com/images/badges/contains-cat-gifs.svg
-
 [Documentation]: https://yuzukihd.gloomyghost.com/Buildroot-YuzukiSBC/#/
 [Releases]: https://github.com/yuzukihd/Buildroot-YuzukiSBC/releases
-
-[Support Lists Page]: https://yuzukihd.gloomyghost.com/Buildroot-YuzukiSBC/#/SupportList
-
 [License]: LICENSE
-
-[Mirror]: https://gitee.com/GloomyGhost/Buildroot-YuzukiSBC 
 [CI]: https://ci.appveyor.com/project/GloomyGhost-MosquitoCoil/buildroot-yuzukisbc
