@@ -71,7 +71,7 @@ Please report bugs and issues using the **Issues** tab of this repository.
 
 ## Development
 Advanced build, configuration and package commands are documented here:
-➡️ [Buildroot Development Commands](docs/buildroot-commands.md)
+➡️ [Buildroot Development Commands](buildroot-scripts.md)
 
 ## About Buildroot
 ```
