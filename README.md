@@ -8,7 +8,7 @@
 
 ## Quick Start-up
 
-For more details, please check [Documentation]
+More Details
 
 ## About Buildroot
 
