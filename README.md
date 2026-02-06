@@ -11,7 +11,7 @@
 
 | Vendor  | Device        | Chip    | U-Boot       | Defconfig                 | SD  | LCD | SPK | JOY | LED | SW  | USB | WIFI | BAT LEVEL |
 |---------|---------------|---------|--------------|---------------------------|-----|-----|-----|-----|-----|-----|-----|------|-----------|
-| InGraw  | InConsole 2.0 | T113-S3 | [tina,uboot 2018](https://github.com/jcyfkimi/tina-u-boot-2018) | inconsole2_defconfig      | ⚠️  | ⚠️  | ⚠️  | ⚠️  | ⚠️  | ⚠️  | ⚠️  | ⚠️   | ⚠️ |
+| InGraw  | InConsole 2.0 | T113-S3 | [tina,uboot 2018](https://github.com/jcyfkimi/tina-u-boot-2018) | inconsole2_defconfig      | ⚠️  | ⚠️  | ⚠️  | ⚠️  | ⚠️  | ⚠️  | ⚠️  | ⚠️   | ⚠️|
 
 
 ## Quick Start-up
