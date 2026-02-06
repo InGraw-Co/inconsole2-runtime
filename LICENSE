@@ -1,3 +1,16 @@
+This project, InConsole 2.0 Runtime, is based on and derived from
+Buildroot-TinyEmbedded-Dual.
+
+Buildroot-TinyEmbedded-Dual is itself based on Buildroot and is licensed
+under the GNU General Public License version 2 (GPL-2.0).
+
+This project is a fork and contains modified and additional code.
+All original copyrights remain with their respective authors.
+
+This project is distributed under the terms of the GNU General Public
+License version 2 (GPL-2.0).
+
+
                     GNU GENERAL PUBLIC LICENSE
                        Version 2, June 1991
 
