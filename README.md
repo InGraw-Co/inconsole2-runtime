@@ -16,8 +16,6 @@
 
 ## Quick Start-up
 
-### More Details
-
 The recommended build environment is **Ubuntu 22.04 LTS (WSL)** – this setup was used for testing.  
 A native Linux installation should also work, however **x86_64 is strongly recommended**.
 
