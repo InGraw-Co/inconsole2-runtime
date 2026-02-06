@@ -6,8 +6,6 @@
 
 <br>
 
-[Documentation] &mdash;
-[Releases] &mdash;
 [License]
 
 <br>
@@ -50,8 +48,4 @@ https://buildroot.org/manual.html#submitting-patches
 
 
 <!----------------------------------------------------------------------------->
-
-[Documentation]: https://yuzukihd.gloomyghost.com/Buildroot-YuzukiSBC/#/
-[Releases]: https://github.com/yuzukihd/Buildroot-YuzukiSBC/releases
 [License]: LICENSE
-[CI]: https://ci.appveyor.com/project/GloomyGhost-MosquitoCoil/buildroot-yuzukisbc
