@@ -200,7 +200,6 @@
 	status = "okay";
 };
 
-
 &ths {
 	status = "okay";
 /*	vref-supply = <&reg_aldo>; */
@@ -210,4 +209,22 @@
 	usb0_vbus-supply = <&reg_usbvbus>;
 	usb1_vbus-supply = <&reg_usbvbus>;
 	status = "okay";
+};
+
+&i2c1 {
+    pinctrl-names = "default";
+    pinctrl-0 = <&i2c1_pg_custom>;
+    status = "okay";
+
+    bq27220: battery@55 {
+        compatible = "ti,bq27220";
+        reg = <0x55>;
+    };
+};
+
+i2c1_pg_custom: i2c1-pins {
+    pins = "PG8", "PG9";
+    function = "i2c1"; 
+    bias-pull-up;
+    drive-strength = <10>;
 };
