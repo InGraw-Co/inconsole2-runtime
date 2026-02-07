@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: (GPL-2.0+ or MIT)
 // Copyright (C) 2022 Arm Ltd.
 /*
- * Common peripherals and configurations for MangoPi MQ-R boards.
+ * Common peripherals and configurations for InConsole 2.0.
  */
 
 #include <dt-bindings/interrupt-controller/irq.h>
@@ -14,26 +14,33 @@
 
 
 / {
-	model = "MangoPi MQ-Dual";
-	compatible = "widora,mangopi-mq-r-t113", "allwinner,sun8i-t113s";
+    model = "InConsole 2.0";
+    compatible = "ingraw,inconsole2", "allwinner,sun8i-t113s";
 
 	aliases {
-		serial0 = &uart0;
-		serial3 = &uart3;
-		ethernet0 = &rtl8189ftv;
+		serial0 = &uart3;
 	};
 
 	chosen {
 		stdout-path = "serial0:115200n8";
 	};
 
+    &pio {
+        boot_led_select {
+            gpio-hog;
+            gpios = <6 11 GPIO_ACTIVE_HIGH>; /* PG11 */
+            output-high;
+            line-name = "led-select";
+        };
+    };
+
 	leds {
 		compatible = "gpio-leds";
 
-		led-0 {
-			color = <LED_COLOR_ID_BLUE>;
+		boot_led: led-boot {
+			color = <LED_COLOR_ID_GREEN>;
 			function = LED_FUNCTION_STATUS;
-			gpios = <&pio 3 22 GPIO_ACTIVE_LOW>; /* PD22 */
+			gpios = <&pio 4 13 GPIO_ACTIVE_LOW>; /* PE13 */
 		};
 	};
 
@@ -64,18 +71,13 @@
 		vin-supply = <&reg_vcc5v>;
 	};
 
-	/* XC6206 LDO on the board */
-	reg_avdd2v8: regulator-avdd {
+	/* SY8008 DC/DC regulator on the board, also supplying VDD-RAM */
+	reg_1v5: regulator-1v5 {
 		compatible = "regulator-fixed";
-		regulator-name = "avdd2v8";
-		regulator-min-microvolt = <2800000>;
-		regulator-max-microvolt = <2800000>;
-		vin-supply = <&reg_3v3>;
-	};
-
-	wifi_pwrseq: wifi-pwrseq {
-		compatible = "mmc-pwrseq-simple";
-		reset-gpios = <&pio 6 12 GPIO_ACTIVE_LOW>; /* PG12 */
+		regulator-name = "vcc-1v5";
+		regulator-min-microvolt = <1500000>;
+		regulator-max-microvolt = <1500000>;
+		vin-supply = <&reg_vcc5v>;
 	};
 };
 
