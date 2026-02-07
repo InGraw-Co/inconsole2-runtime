@@ -77,7 +77,7 @@
     };
 
 	panel {
-		compatible = "bananapi,s070wv20-ct16", "simple-panel";
+		compatible = "simple-panel";
 		port {
 			panel_input: endpoint {
 				remote-endpoint = <&tcon_lcd0_out_panel>;
@@ -90,6 +90,14 @@
 	regulator-min-microvolt = <1800000>;
 	regulator-max-microvolt = <1800000>;
 	vdd33-supply = <&reg_vcc_3v3>;
+};
+
+&reg_bldo {
+    compatible = "regulator-fixed";
+    regulator-name = "bldo";
+    regulator-min-microvolt = <1500000>;
+    regulator-max-microvolt = <1500000>;
+    vin-supply = <&reg_vcc_3v3>; /* zasilanie z 3.3V */
 };
 
 &cpu0 {
