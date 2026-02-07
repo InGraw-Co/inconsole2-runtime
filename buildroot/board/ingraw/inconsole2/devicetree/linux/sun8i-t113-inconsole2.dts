@@ -69,8 +69,8 @@
 
         boot_led: led-boot {
             label = "led_boot";
-            pwms = <&pwm5 0 1000000 500000>; /* PWM5, kanał 0, okres 1 ms, duty-cycle 50% */
-            linux,default-trigger = "heartbeat"; /* miganie podczas bootu */
+            pwms = <&pwm5 0 1000000 500000>; /* PWM5 */
+            linux,default-trigger = "heartbeat";
             default-state = "on";
             color = "green";
         };
@@ -92,12 +92,12 @@
 	vdd33-supply = <&reg_vcc_3v3>;
 };
 
-&reg_bldo {
+&reg_bldo { /* only test */
     compatible = "regulator-fixed";
     regulator-name = "bldo";
     regulator-min-microvolt = <1500000>;
     regulator-max-microvolt = <1500000>;
-    vin-supply = <&reg_vcc_3v3>; /* zasilanie z 3.3V */
+    vin-supply = <&reg_vcc_3v3>;
 };
 
 &cpu0 {
