@@ -25,15 +25,6 @@
 		stdout-path = "serial0:115200n8";
 	};
 
-    &pio {
-        boot_led_select {
-            gpio-hog;
-            gpios = <6 11 GPIO_ACTIVE_HIGH>; /* PG11 */
-            output-high;
-            line-name = "led-select";
-        };
-    };
-
 	leds {
 		compatible = "gpio-leds";
 
@@ -117,6 +108,12 @@
 	vcc-pe-supply = <&reg_3v3>;
 	vcc-pf-supply = <&reg_3v3>;
 	vcc-pg-supply = <&reg_3v3>;
+    boot_led_select {
+        gpio-hog;
+        gpios = <6 11 GPIO_ACTIVE_HIGH>; /* PG11 */
+        output-high;
+        line-name = "led-select";
+    };
 };
 
 &uart0 {
