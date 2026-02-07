@@ -175,6 +175,13 @@
 			function = "clk";
 	};
 
+    boot_led_select {
+        gpio-hog;
+        gpios = <6 11 GPIO_ACTIVE_HIGH>; /* PG11 */
+        output-high;
+        line-name = "led-select";
+    };
+
 };
 
 &uart0 {
