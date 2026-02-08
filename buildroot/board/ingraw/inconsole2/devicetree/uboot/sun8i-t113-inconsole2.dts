@@ -117,9 +117,7 @@
 };
 
 &uart0 {
-	pinctrl-names = "default";
-	pinctrl-0 = <&uart0_pe2_pins>;
-	status = "okay";
+    status = "disabled";
 };
 
 &uart3 {
