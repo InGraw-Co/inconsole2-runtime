@@ -12,11 +12,9 @@
 	compatible = "allwinner,sun20i-d1", "allwinner,sun8i";
 
 	aliases {
-		mmc0 = &mmc0;
-		serial0 = &uart0;
-		serial1 = &uart1;
-		serial3 = &uart3;
-		serial5 = &uart5;
+        serial0 = &uart3;
+        serial1 = &uart1;
+        mmc0 = &mmc0;
 	};
 
 	chosen {
@@ -164,15 +162,13 @@
 };
 
 &uart0 {
-	pinctrl-0 = <&uart0_pe2_pins>;
-	pinctrl-names = "default";
-	status = "okay";
+    status = "disabled";
 };
 
 &uart3 {
-	pinctrl-0 = <&uart3_pb_pins>;
-	pinctrl-names = "default";
-	status = "okay";
+    pinctrl-0 = <&uart3_pb_pins>;
+    pinctrl-names = "default";
+    status = "okay";
 };
 
 &mmc0 {
