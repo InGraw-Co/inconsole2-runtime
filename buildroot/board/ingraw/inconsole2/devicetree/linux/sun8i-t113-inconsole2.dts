@@ -211,6 +211,12 @@
 	status = "okay";
 };
 
+i2c1_pg_custom: i2c1-pins {
+    pins = "PG8", "PG9";
+    function = "i2c1";
+    drive-strength = <10>;
+};
+
 &i2c1 {
     pinctrl-names = "default";
     pinctrl-0 = <&i2c1_pg_custom>;
@@ -222,9 +228,19 @@
     };
 };
 
-i2c1_pg_custom: i2c1-pins {
-    pins = "PG8", "PG9";
-    function = "i2c1"; 
-    bias-pull-up;
+i2c2_pe_custom: i2c2-pins {
+    pins = "PE2", "PE3";
+    function = "i2c2";
     drive-strength = <10>;
+};
+
+&i2c2 {
+    pinctrl-0 = <&i2c2_pe_custom>;
+    pinctrl-names = "default";
+    status = "okay";
+
+    joystick@48 {
+        compatible = "ti,ads1115";
+        reg = <0x48>;
+    };
 };
