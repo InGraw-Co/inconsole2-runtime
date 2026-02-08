@@ -152,7 +152,7 @@
 	vcc-pb-supply = <&reg_vcc_3v3>;
 	vcc-pc-supply = <&reg_vcc_3v3>;
 	vcc-pd-supply = <&reg_vcc_3v3>;
-	vcc-pe-supply = <&reg_avdd2v8>;
+	vcc-pe-supply = <&reg_vcc_3v3>;
 	vcc-pf-supply = <&reg_vcc_3v3>;
 	vcc-pg-supply = <&reg_vcc_3v3>;
 
