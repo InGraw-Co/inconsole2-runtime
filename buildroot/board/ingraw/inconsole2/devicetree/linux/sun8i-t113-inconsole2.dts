@@ -12,6 +12,7 @@
 	compatible = "allwinner,sun20i-d1", "allwinner,sun8i";
 
 	aliases {
+        serial3 = &uart3;
         serial0 = &uart3;
         serial1 = &uart1;
         mmc0 = &mmc0;
