@@ -82,6 +82,26 @@
 			};
 		};
 	};
+
+    adc_joystick: adc-joystick {
+        compatible = "adc-joystick";
+        io-channels = <&joystick@48 0>, <&joystick@48 1>;
+        poll-interval = <20>;
+        
+        axis-x {
+            linux,code = <0x00>;
+            abs-range = <0 32767>;
+            abs-fuzz = <32>;
+            abs-flat = <32>;
+        };
+        
+        axis-y {
+            linux,code = <0x01>;
+            abs-range = <0 32767>;
+            abs-fuzz = <32>;
+            abs-flat = <32>;
+        };
+    };
 };
 
 &reg_aldo {
@@ -230,7 +250,7 @@
     status = "okay";
 
     bq27220: battery@55 {
-        compatible = "ti,bq27220", "ti,bq27xxx";
+        compatible = "ti,bq27220";
         reg = <0x55>;
     };
 };
@@ -241,9 +261,9 @@
     status = "okay";
 
     joystick@48 {
-        compatible = "ti,ads1115", "ti,ads1015";
-
+        compatible = "ti,ads1115";
         reg = <0x48>;
+        #io-channel-cells = <1>;
     };
 };
 
