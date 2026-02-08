@@ -102,6 +102,89 @@
             abs-flat = <32>;
         };
     };
+
+    gpio_keys: gpio-keys {
+        compatible = "gpio-keys";
+        autorepeat;
+
+        button-up {
+            label = "DPAD-UP";
+            linux,code = <103>; /* KEY_UP */
+            gpios = <&pio 4 7 GPIO_ACTIVE_LOW>; /* PE7 */
+        };
+
+        button-down {
+            label = "DPAD-DOWN";
+            linux,code = <108>; /* KEY_DOWN */
+            gpios = <&pio 4 9 GPIO_ACTIVE_LOW>; /* PE9 */
+        };
+
+        button-left {
+            label = "DPAD-LEFT";
+            linux,code = <105>; /* KEY_LEFT */
+            gpios = <&pio 4 8 GPIO_ACTIVE_LOW>; /* PE8 */
+        };
+
+        button-right {
+            label = "DPAD-RIGHT";
+            linux,code = <106>; /* KEY_RIGHT */
+            gpios = <&pio 4 10 GPIO_ACTIVE_LOW>; /* PE10 */
+        };
+
+        button-a {
+            label = "BTN-A";
+            linux,code = <304>; /* BTN_A */
+            gpios = <&pio 6 14 GPIO_ACTIVE_LOW>; /* PG14 */
+        };
+
+        button-b {
+            label = "BTN-B";
+            linux,code = <305>; /* BTN_B */
+            gpios = <&pio 6 13 GPIO_ACTIVE_LOW>; /* PG13 */
+        };
+
+        button-x {
+            label = "BTN-X";
+            linux,code = <307>; /* BTN_X */
+            gpios = <&pio 6 12 GPIO_ACTIVE_LOW>; /* PG12 */
+        };
+
+        button-y {
+            label = "BTN-Y";
+            linux,code = <308>; /* BTN_Y */
+            gpios = <&pio 6 4 GPIO_ACTIVE_LOW>; /* PG4 */
+        };
+
+        button-l {
+            label = "BTN-L";
+            linux,code = <310>; /* BTN_TL */
+            gpios = <&pio 4 6 GPIO_ACTIVE_LOW>; /* PE6 */
+        };
+
+        button-r {
+            label = "BTN-R";
+            linux,code = <311>; /* BTN_TR */
+            gpios = <&pio 6 5 GPIO_ACTIVE_LOW>; /* PG5 */
+        };
+
+        button-select {
+            label = "BTN-SELECT";
+            linux,code = <314>; /* BTN_SELECT */
+            gpios = <&pio 4 11 GPIO_ACTIVE_LOW>; /* PE11 */
+        };
+
+        button-start {
+            label = "BTN-START";
+            linux,code = <315>; /* BTN_START */
+            gpios = <&pio 6 15 GPIO_ACTIVE_LOW>; /* PG15 */
+        };
+
+        button-joy {
+            label = "BTN-JOYSTICK-CLICK";
+            linux,code = <317>; /* BTN_THUMBL */
+            gpios = <&pio 4 12 GPIO_ACTIVE_LOW>; /* PE12 */
+        };
+    };
 };
 
 &reg_aldo {
