@@ -24,7 +24,7 @@ Other architectures (e.g. ARM) are not guaranteed to work out of the box and may
 
 ### 1. Install dependencies
 ```bash
-sudo apt install rsync wget unzip build-essential git bc swig libncurses-dev libpython3-dev libssl-dev python3-distutils android-tools-mkbootimg
+sudo apt install rsync wget unzip build-essential git bc swig libncurses-dev libpython3-dev libssl-dev python3-setuptools mkbootimg
 ```
 
 ---
