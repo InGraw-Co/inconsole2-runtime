@@ -183,7 +183,8 @@
 };
 
 &codec {
-    status = "disabled";
+    allwinner,audio-routing = "Headphone", "HP"; 
+    status = "okay";
 };
 
 &usb_otg {
